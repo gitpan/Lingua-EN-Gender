@@ -1,5 +1,14 @@
-lib/Lingua/EN/Gender.pm
-MANIFEST
+ChangeLog
+gender.pl
+Lingua/EN/Gender.pm
 Makefile.PL
+MANIFEST
 README
-Changes
+samples/adam.txt
+samples/eyre.txt
+samples/mobydick.txt
+samples/README.PG
+samples/sands.txt
+samples/tale.txt
+t/samples.t
+t/sample1.txt

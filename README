@@ -1,45 +1,47 @@
+Lingua::EN::Gender version 1.0
+==============================
 
+Lingua::EN::Gender implements the Koppel-Argamon algorithm for
+guessing an author's gender.  The algorithm was invented by Moshe
+Koppel (Bar-Ilan University, Israel) and Shlomo Argamon (Illinois
+Institute of Technology), and is described at:
 
-Lingua::EN::Gender
+  http://www.nytimes.com/2003/08/10/magazine/10wwln-test.html
 
+I first learned of this algorithm at:
 
-Small module for inflecting pronouns for a bunch of different
-genders.
+  http://www.bookblog.net/gender/genie.html
 
-Genders currently supported are:
-   neuter
-   male
-   female
-   either
-   spivak
-   splat
-   plural
-   egotistical
-   royal
-   2nd
-   sie/hir
-   zie/zir
+gender.pl is a script for guessing the gender of a file's author.  For
+details, do:
 
+  perldoc gender.pl
 
-INSTALLING
-==========
+INSTALLATION
 
-After unzipping and untarring the distribution directory, you install
-the library by running these commands:
+To install this module type the following:
 
    perl Makefile.PL
    make
    make test
    make install
 
+SAMPLE TEXTS
 
-OTHER STUFF
-===========
+The samples directory contains the following book excerpts, thanks to
+Project Gutenberg:
 
-Contacting me:  bekj@netizen.com.au is best.
+  Bronte, Charlotte  Jane Eyre                   Chapter 2 [eBook #1260]
+  Dickens, Charles   A Tale of Two Cities        Chapter 1 [Etext #  98]
+  Melville, Herman   Moby Dick; or The Whale     Chapter 1 [Etext #2701]
+  Sands, George W.   Mazelli, and Other Poems    Preface   [Etext #2008]
+  Twain, Marc        Extracts From Adam's Diary  complete  [Etext #1892]
 
-ObLegalStuff:
-   Copyright (c) 1998 Bek Oberin. All rights reserved. This program is
-   free software; you can redistribute it and/or modify it under the
-   same terms as Perl itself.
+See samples/README.PG for more information about Project Gutenberg.
 
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2003 Blue Oxen Associates.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 

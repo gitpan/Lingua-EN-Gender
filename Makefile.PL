@@ -1,29 +1,12 @@
+use 5.006001;
 use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 WriteMakefile(
-    'NAME'	=> 'Lingua::EN::Gender',
-    'VERSION_FROM' => 'lib/Lingua/EN/Gender.pm', # finds $VERSION
-    'dist'         => {
-                         COMPRESS => 'gzip -9f',
-                         SUFFIX => 'gz',
-                      },
+    'NAME'		=> 'Lingua::EN::Gender',
+    'VERSION_FROM'	=> 'Lingua/EN/Gender.pm', # finds $VERSION
+    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
+    ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
+      (ABSTRACT_FROM => 'Lingua/EN/Gender.pm', # retrieve abstract from module
+       AUTHOR     => 'Eugene Eric Kim <eekim@blueoxen.org>') : ()),
 );
-
-
-sub MY::postamble {
-   package MY;
-
-   '
-
-WEBDIR = /home/gossamer/websrc/docs/code
-WEB_FILELIST = $(WEBDIR)/file-list
-
-webdist: dist
-	@$(MKPATH) $(WEBDIR)/$(DISTNAME)/
-	cp $(DISTVNAME).tar.$(SUFFIX) $(WEBDIR)/$(DISTNAME)/
-	cp README $(WEBDIR)/$(DISTNAME)/$(DISTVNAME).README
-
-'
-}
-
